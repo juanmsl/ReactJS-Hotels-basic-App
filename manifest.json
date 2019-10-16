@@ -1,0 +1,15 @@
+{
+  "short_name": "Hotel Dreams",
+  "name": "Hotel Dreams",
+  "icons": [
+    {
+      "src": "houseLogo.png",
+      "type": "image/png",
+      "sizes": "256x256 192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#fde7a5",
+  "background_color": "#ffffff"
+}

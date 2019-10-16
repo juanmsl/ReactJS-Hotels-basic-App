@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ReactJS-Hotels-basic-App/static/css/main.bcb0bd48.chunk.css",
+    "main.js": "/ReactJS-Hotels-basic-App/static/js/main.6224e27e.chunk.js",
+    "main.js.map": "/ReactJS-Hotels-basic-App/static/js/main.6224e27e.chunk.js.map",
+    "runtime-main.js": "/ReactJS-Hotels-basic-App/static/js/runtime-main.8da600cf.js",
+    "runtime-main.js.map": "/ReactJS-Hotels-basic-App/static/js/runtime-main.8da600cf.js.map",
+    "static/js/2.90dc5352.chunk.js": "/ReactJS-Hotels-basic-App/static/js/2.90dc5352.chunk.js",
+    "static/js/2.90dc5352.chunk.js.map": "/ReactJS-Hotels-basic-App/static/js/2.90dc5352.chunk.js.map",
+    "index.html": "/ReactJS-Hotels-basic-App/index.html",
+    "precache-manifest.786695da8d85f8f14a418c3eeb527f4f.js": "/ReactJS-Hotels-basic-App/precache-manifest.786695da8d85f8f14a418c3eeb527f4f.js",
+    "service-worker.js": "/ReactJS-Hotels-basic-App/service-worker.js",
+    "static/css/main.bcb0bd48.chunk.css.map": "/ReactJS-Hotels-basic-App/static/css/main.bcb0bd48.chunk.css.map",
+    "static/media/houseLogo.png": "/ReactJS-Hotels-basic-App/static/media/houseLogo.452ed068.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8da600cf.js",
+    "static/js/2.90dc5352.chunk.js",
+    "static/css/main.bcb0bd48.chunk.css",
+    "static/js/main.6224e27e.chunk.js"
+  ]
+}
