@@ -1,0 +1,54 @@
+.aca-header {
+  background: $primary-color;
+  color: $secondary-color;
+  border-bottom: 3px solid $third-color;
+  display: block;
+  align-items: flex-end;
+  padding: $padding * 4 $padding * 6 $padding * 3;
+
+  @include from(mobile) {
+    display: flex;
+  }
+
+  @include from(tablet) {
+    padding: $padding * 10 $padding * 14 $padding * 5;
+  }
+
+  .aca-header__logo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    background: white;
+    padding: $padding;
+    border-radius: 50%;
+
+    @include from(mobile) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @include from(tablet) {
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  .aca-header__title {
+    font-size: 2em;
+    margin: 0;
+    padding: 0 0 0 $padding * 2;
+    font-family: $title-font;
+
+    @include from(mobile) {
+      font-size: 3em;
+    }
+
+    @include from(tablet) {
+      font-size: 4em;
+    }
+
+    @include from(laptop) {
+      font-size: 5em;
+    }
+  }
+}

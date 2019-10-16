@@ -1,0 +1,31 @@
+.aca-search-result {
+  text-align: center;
+  padding: $padding $padding * 6;
+
+  @include from(tablet) {
+    padding: $padding * 3 $padding * 14;
+  }
+}
+
+.aca-filterbar {
+  padding: $padding $padding * 6;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-gap: $gutter;
+  background: $third-color;
+  color: white;
+
+  @include from(tablet) {
+    padding: $padding $padding * 14;
+  }
+
+  .aca-input {
+    padding: $padding;
+    font-size: 0.8em;
+    border: 0;
+    border-radius: $gutter;
+    outline: 0;
+    appearance: none;
+  }
+}

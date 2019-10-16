@@ -1,0 +1,103 @@
+.aca-hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: $gutter * 3;
+  align-items: start;
+  padding: $padding $padding * 6;
+
+  @include from(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: $padding $padding * 14;
+  }
+
+  @include from(laptop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include from(large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.aca-hotel {
+  background: $gray-light-color;
+  box-shadow: 0 0 10px $gray-color;
+  transition: all 0.3s ease-out;
+
+  .aca-hotel__header {
+
+  }
+
+  .aca-hotel__photo {
+    width: 100%;
+    transition: all 0.3s ease-out;
+  }
+
+  .aca-hotel__body {
+    transition: all 0.3s ease-out;
+    padding: $padding * 2;
+  }
+
+  .aca-hotel__name {
+
+  }
+
+  .aca-hotel__description {
+    font-size: 0.9em;
+  }
+
+  .aca-hotel__info-dates {
+    font-size: 0.8em;
+  }
+
+  .aca-hotel__info-place {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  .aca-hotel__info {
+
+  }
+
+  .aca-hotel__info-value {
+    font-weight: bold;
+  }
+
+  .aca-hotel__price {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .aca-hotel__reserve-button {
+    background: $primary-color;
+    padding: $padding $padding * 2;
+    border: 0;
+    border-radius: $gutter;
+    border-bottom: 3px solid $secondary-color;
+    transition: all 0.05s linear, opacity 0.3s ease-out;
+    outline: 0;
+    display: block;
+    margin: $margin * 2 auto 0;
+    opacity: 0;
+
+    &:active {
+      border-bottom: 1px solid $secondary-color;
+      transform: translateY(2px);
+    }
+  }
+
+  &:hover {
+
+    .aca-hotel__photo {
+      transform: scale(0.95);
+    }
+
+    .aca-hotel__body {
+      transform: translateY(-$gutter);
+    }
+
+    .aca-hotel__reserve-button {
+      opacity: 1;
+    }
+  }
+}

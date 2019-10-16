@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700|Poppins:200,300,400&display=swap');
+
+$main-font: Poppins, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$title-font: Comfortaa, 'Helvetica Neue', Arial, Helvetica, cursive;
+
+$gutter: 10px;
+$margin: 10px;
+$padding: 10px;
+
+$breakpoints: (
+  mobile: 600px,
+  tablet: 900px,
+  laptop: 1200px,
+  pc: 1400px,
+  large: 1824px
+);
+
+$primary-color: #fde7a5;
+$secondary-color: #ee5835;
+$third-color: #a8af46;
+
+$gray-light-color: #eff3f6;
+$gray-color: #c5ccd2;
+
+$active-color: #13CE66;
+$warning-color: #FFBA5C;
+$alert-color: #F95F62;
