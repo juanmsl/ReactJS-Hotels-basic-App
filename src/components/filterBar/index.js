@@ -39,11 +39,11 @@ export default class FilterBar extends React.Component {
                     {this.renderOptions(countries, country)}
                 </select>
                 <select name="price" className="aca-input" onChange={this.handleChange} value={price}>
-                    <option value="">All prices</option>
+                    <option value="0">All prices</option>
                     {this.renderOptions(prices, price)}
                 </select>
                 <select name="roomsCount" className="aca-input" onChange={this.handleChange} value={roomsCount}>
-                    <option value="">All rooms count</option>
+                    <option value="0">All rooms count</option>
                     {this.renderOptions(rooms, roomsCount)}
                 </select>
             </section>

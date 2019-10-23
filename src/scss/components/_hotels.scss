@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: $gutter * 3;
-  align-items: start;
   padding: $padding $padding * 6;
 
   @include from(tablet) {

@@ -10,7 +10,7 @@
 .aca-filterbar {
   padding: $padding $padding * 6;
   display: grid;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
   grid-auto-columns: 1fr;
   grid-gap: $gutter;
   background: $third-color;
@@ -18,6 +18,7 @@
 
   @include from(tablet) {
     padding: $padding $padding * 14;
+    grid-auto-flow: column;
   }
 
   .aca-input {
