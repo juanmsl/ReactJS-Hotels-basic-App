@@ -9,14 +9,14 @@ import {HotelCard, SearchResult} from "../components";
 import moment from "moment";
 
 
-export default class YourVacationHouseApp extends React.Component {
+export default class HotelDreamsApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             hotels: [],
             filter: {
                 dateFrom: moment().format("YYYY-MM-DD"),
-                dateTo: moment().format("YYYY-MM-DD"),
+                dateTo: moment().add(1, 'year').format("YYYY-01-01"),
                 country: "",
                 price: "",
                 roomsCount: "",
@@ -25,12 +25,20 @@ export default class YourVacationHouseApp extends React.Component {
     }
 
     setFilter = (name, value) => {
-      this.setState((prevState) => ({
-          filter: {
-              ...prevState.filter,
-              [name]: value
-          }
-      }));
+        const extra = {};
+        if(name === 'dateFrom') {
+            if(moment(value).unix() > moment(this.state.filter.dateTo).unix()) { extra.dateTo = value; }
+        }
+        if(name === 'dateTo') {
+            if(moment(this.state.filter.dateFrom).unix() > moment(value).unix()) { extra.dateFrom = value; }
+        }
+        this.setState((prevState) => ({
+            filter: {
+                ...prevState.filter,
+                ...extra,
+                [name]: value
+            }
+        }));
     };
 
     componentDidMount() {
@@ -49,12 +57,16 @@ export default class YourVacationHouseApp extends React.Component {
 
     filterHotels = (filter, hotels) => (
         hotels.filter((hotel) => {
-            console.log(moment(filter.dateFrom).unix() * 1000, hotel.availabilityFrom);
+            const range_a_start = moment(filter.dateFrom).unix();
+            const range_a_end = moment(filter.dateTo).unix();
+            const range_b_start = moment(hotel.availabilityFrom).unix();
+            const range_b_end = moment(hotel.availabilityTo).unix();
+            const dateFilter = range_a_start <= range_b_end && range_a_end >= range_b_start;
             const countryFilter = filter.country !== "" ? filter.country === hotel.country : true;
             const priceFilter = filter.price !== "" ? filter.price >= hotel.price : true;
             const roomsFilter = filter.roomsCount !== "" ? filter.roomsCount <= hotel.rooms : true;
 
-            return countryFilter && priceFilter && roomsFilter;
+            return dateFilter && countryFilter && priceFilter && roomsFilter;
         })
     );
 
@@ -65,8 +77,8 @@ export default class YourVacationHouseApp extends React.Component {
         return (
             <main>
                 <Header/>
-                <FilterBar hotels={hotels} filter={filter} setFilter={this.setFilter} />
-                <SearchResult filterResultCount={filteredHotels.length} />
+                <FilterBar hotels={hotels} filter={filter} setFilter={this.setFilter}/>
+                <SearchResult filterResultCount={filteredHotels.length}/>
                 <HotelGrid>
                     {this.renderHotels(filteredHotels)}
                 </HotelGrid>

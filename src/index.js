@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'scss/styles.scss';
-import YourVacationHouseApp from 'modules';
+import HotelDreamsApp from 'modules';
 
 
 ReactDOM.render(
-    <YourVacationHouseApp />,
+    <HotelDreamsApp />,
     document.getElementById('root')
 );
