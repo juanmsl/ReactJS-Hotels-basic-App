@@ -63,8 +63,8 @@ export default class HotelDreamsApp extends React.Component {
             const range_b_end = moment(hotel.availabilityTo).unix();
             const dateFilter = range_a_start <= range_b_end && range_a_end >= range_b_start;
             const countryFilter = filter.country !== "" ? filter.country === hotel.country : true;
-            const priceFilter = filter.price !== "" ? filter.price >= hotel.price : true;
-            const roomsFilter = filter.roomsCount !== "" ? filter.roomsCount <= hotel.rooms : true;
+            const priceFilter = filter.price !== "" ? filter.price === hotel.price : true;
+            const roomsFilter = filter.roomsCount !== "" ? filter.roomsCount === hotel.rooms : true;
 
             return dateFilter && countryFilter && priceFilter && roomsFilter;
         })
