@@ -1,9 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDollarSign, faHome } from '@fortawesome/free-solid-svg-icons';
-import Moment from 'moment';
-import { extendMoment } from 'moment-range';
-const moment = extendMoment(Moment);
+import moment from 'moment';
 
 
 export default class HotelCard extends React.Component {
